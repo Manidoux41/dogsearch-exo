@@ -8,6 +8,12 @@ const showMore = document.getElementById("show-more-button");
 let inputData = "";
 let page = 1;
 
+/**
+ * Fetches and displays images from Unsplash API based on user input.
+ *
+ * @param {string} inputData - The user input for the search query.
+ * @return {undefined} This function does not return a value.
+ */
 async function searchImages() {
     inputData = inputEl.value;
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
